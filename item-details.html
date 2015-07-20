@@ -1,0 +1,19 @@
+<td colspan="9">
+	<img class="button" ng-class="{
+		'green': listItem.metrics.pass,
+		'red': !listItem.metrics.pass
+	}" ng-click="item.view($index, 1)" ng-show="listItem.metrics.img" ng-src="{{ listItem.metrics.img }}" />
+	<img class="button" ng-class="{
+		'green': listItem.build.pass,
+		'red': !listItem.build.pass
+	}" ng-click="item.view($index, 2)" ng-show="listItem.build.img" ng-src="{{ listItem.build.img }}" />
+	<img class="button" ng-class="{
+		'green': listItem.unitTest.pass,
+		'red': !listItem.unitTest.pass
+	}" ng-click="item.view($index, 3)" ng-show="listItem.unitTest.img" ng-src="{{ listItem.unitTest.img }}" />
+	<img class="button" ng-class="{'
+		green': listItem.functionalTest.pass,
+		'red': !listItem.functionalTest.pass
+	}" ng-click="item.view($index, 4)" ng-show="listItem.functionalTest.img" ng-src="{{ listItem.functionalTest.img }}" />
+	<result ng-show="listItem.message"></result>
+</td>

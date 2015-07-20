@@ -1,0 +1,13 @@
+<div class="message text-center">
+	<p>Result:</p>
+	<div ng-class="{
+		'green': listItem.state === 'Complete',
+		'red': listItem.state === 'Rejected',
+		'yellow': listItem.state === 'Accepted'
+	}">
+		<p ng-show="listItem.type === 'Firewall'">Change {{ listItem.state }}</p>
+		<p>
+			<span>{{ listItem.message }}</span>
+		</p>
+	</div>
+</div>

@@ -1,0 +1,27 @@
+<td><img ng-src="img/icon_{{ listItem.type | lowercase }}.png" /></td>
+<td>{{ listItem.id }}</td>
+<td>{{ listItem.owner }}</td>
+<td>{{ listItem.timeStarted }}</td>
+<td>{{ listItem.state }}</td>
+<td>
+	<div class="box" ng-class="{
+		'green': listItem.metrics.pass,
+		'grey': !listItem.metrics.pass,
+		'red': listItem.metrics.pass === false
+	}">&nbsp;</div>
+</td>
+<td><div class="box" ng-class="{
+		'green': listItem.build.pass,
+		'grey': !listItem.build.pass,
+		'red': listItem.build.pass === false
+	}">&nbsp;</div></td>
+<td><div class="box" ng-class="{
+		'green': listItem.unitTest.pass,
+		'grey': !listItem.unitTest.pass,
+		'red': listItem.unitTest.pass === false
+	}">&nbsp;</div></td>
+<td><div class="box" ng-class="{
+		'green': listItem.functionalTest.pass,
+		'grey': !listItem.functionalTest.pass,
+		'red': listItem.functionalTest.pass === false
+	}">&nbsp;</div></td>

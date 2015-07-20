@@ -1,0 +1,11 @@
+{
+	"name": "gTeam",
+	"version": "1.0.0",
+	"private": true,
+	"dependencies": {
+		"local-web-server": "0.5.x"
+	},
+	"scripts": {
+		"start": "ws"
+	}
+}

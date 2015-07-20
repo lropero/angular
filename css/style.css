@@ -1,0 +1,81 @@
+body {
+	margin-top: 30px;
+}
+
+div.box {
+	border: 1px solid #bcbcbc;
+	height: 30px;
+	width: 50px;
+}
+
+div.box.green {
+	background-color: #538135;
+}
+
+div.box.grey {
+	background-color: #d8d8d8;
+}
+
+div.box.red {
+	background-color: #c00000;
+}
+
+div.message {
+	float: right;
+	margin: 50px 30px 0 0;
+	width: 180px;
+}
+
+div.message div.green {
+	color: #538135;
+}
+
+div.message div.red {
+	color: #c00000;
+}
+
+div.message div.yellow {
+	color: #febc00;
+}
+
+div.message div p {
+	font-size: 14px;
+	font-weight: bold;
+}
+
+div.message div p span {
+	font-size: 18px;
+	font-weight: bold;
+}
+
+img.button {
+	cursor: pointer;
+	margin: 10px;
+}
+
+img.button.green {
+	border: 3px solid #538135;
+}
+
+img.button.red {
+	border: 3px solid #c00000;
+}
+
+table.table {
+	border-collapse: separate;
+	border-spacing: 0 10px;
+	font-family: "Arial", "Helvetica";
+	padding: 10px;
+}
+
+table.table th.box {
+	width: 100px;
+}
+
+table.table tr.item.active, table.table tr.item.info {
+	cursor: default;
+}
+
+table.table tr.item.danger, table.table tr.item.success {
+	cursor: pointer;
+}

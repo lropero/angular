@@ -1,0 +1,27 @@
+<div class="container">
+	<div class="panel panel-default">
+		<table class="table">
+			<thead>
+				<tr>
+					<th colspan="2">Changelist / Build</th>
+					<th>Owner</th>
+					<th>Time Started</th>
+					<th>State</th>
+					<th class="box">Metrics</th>
+					<th class="box">Build</th>
+					<th class="box">Unit Test</th>
+					<th class="box">Functional Test</th>
+				</tr>
+			</thead>
+			<tbody ng-controller="ItemController as item">
+				<tr item class="item" ng-class="{
+					'active': listItem.state === 'Pending',
+					'danger': listItem.state === 'Rejected',
+					'info': listItem.state === 'Running',
+					'success': listItem.state === 'Accepted' || listItem.state === 'Complete'
+				}" ng-click="item.expand(listItem.state, $index)" ng-repeat-start="listItem in list.items"></tr>
+				<tr item-details ng-repeat-end="" ng-show="item.current === $index"></tr>
+			</tbody>
+		</table>
+	</div>
+</div>
